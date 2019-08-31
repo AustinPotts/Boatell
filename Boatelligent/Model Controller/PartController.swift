@@ -9,9 +9,9 @@
 import Foundation
 
 class PartController {
-    var part: [Part] = [ Part(name: "Fluxer", price: "Thirty", imageName: "part1"),
-                         Part(name: "Floater", price: "Forty", imageName: "part2"),
-                         Part(name: "Bellbop", price: "Fifty", imageName: "part3")
+    var part: [Part] = [ Part(name: "Name: Fluxer", price: "Price: Thirty", imageName: "part1", partNumber: "Part No. Forty"),
+                         Part(name: "Name: Floater", price: "Price: Forty", imageName: "part2", partNumber: "Part No. Ten"),
+                         Part(name: "Name: Bellbop", price: "Price: Fifty", imageName: "part3", partNumber: "Part No. Seven")
 
 
                 ]

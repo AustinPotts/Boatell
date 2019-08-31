@@ -95,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hai-Zr-a78">
-                                <rect key="frame" x="50" y="459" width="314" height="124"/>
+                                <rect key="frame" x="120" y="459" width="244" height="124"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpC-Zd-c8Y">
                                         <rect key="frame" x="0.0" y="0.0" width="137.5" height="36"/>
@@ -125,6 +125,9 @@
                                 <rect key="frame" x="144" y="649" width="132" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Purchase Part"/>
+                                <connections>
+                                    <action selector="purchasePartTapped:" destination="xom-Ad-XcH" eventType="touchUpInside" id="2f5-k7-Lw2"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-xQ-XXW">
                                 <rect key="frame" x="87" y="297" width="240" height="128"/>
@@ -137,11 +140,17 @@
                             <constraint firstItem="6CY-Wo-jJd" firstAttribute="trailing" secondItem="pip-DL-ijE" secondAttribute="trailing" constant="138" id="SIs-Sa-Eg8"/>
                             <constraint firstItem="6CY-Wo-jJd" firstAttribute="bottom" secondItem="pip-DL-ijE" secondAttribute="bottom" constant="128" id="gEC-Eo-l0d"/>
                             <constraint firstItem="6CY-Wo-jJd" firstAttribute="trailing" secondItem="hai-Zr-a78" secondAttribute="trailing" constant="50" id="ted-UP-H3l"/>
-                            <constraint firstItem="hai-Zr-a78" firstAttribute="leading" secondItem="6CY-Wo-jJd" secondAttribute="leading" constant="50" id="teg-in-51Q"/>
+                            <constraint firstItem="hai-Zr-a78" firstAttribute="leading" secondItem="6CY-Wo-jJd" secondAttribute="leading" constant="120" id="teg-in-51Q"/>
                             <constraint firstItem="pip-DL-ijE" firstAttribute="leading" secondItem="6CY-Wo-jJd" secondAttribute="leading" constant="144" id="ySB-QC-NXU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6CY-Wo-jJd"/>
                     </view>
+                    <connections>
+                        <outlet property="partImage" destination="cJ0-xQ-XXW" id="Fc7-dj-WFG"/>
+                        <outlet property="partNameLabel" destination="rpC-Zd-c8Y" id="WlF-i4-gRq"/>
+                        <outlet property="partNumberLabel" destination="2TK-DA-F6M" id="yea-QA-d65"/>
+                        <outlet property="partPriceLabel" destination="Z0l-1f-3nR" id="65L-AF-gfw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rw-NA-iYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

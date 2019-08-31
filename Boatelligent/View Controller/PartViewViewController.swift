@@ -10,10 +10,33 @@ import UIKit
 
 class PartViewViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var partImage: UIImageView!
+    @IBOutlet weak var partNameLabel: UILabel!
+    @IBOutlet weak var partNumberLabel: UILabel!
+    @IBOutlet weak var partPriceLabel: UILabel!
+    
+    
+    
+    @IBAction func purchasePartTapped(_ sender: Any) {
+    }
+    
+    var part: Part?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       updateViews()
+    }
+    
+    func updateViews(){
+        if let part = part {
+            partImage.image = part.image
+            partNameLabel.text = part.name
+            partPriceLabel.text = part.price
+            partNumberLabel.text = part.partNumber
+        }
     }
     
 

@@ -61,6 +61,21 @@ class BoatPartsCollectionViewController: UICollectionViewController {
         cell.parts = part
         return cell
     }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PartViewSegue" {
+            guard let indexPath = collectionView.indexPathsForSelectedItems?.first?.item,
+                let partSelectVC = segue.destination as? PartViewViewController else{return}
+            
+            let selectedPart = partController.part[indexPath]
+            partSelectVC.part = selectedPart
+            
+        }
+    }
+    
+    
 
     // MARK: UICollectionViewDelegate
 
