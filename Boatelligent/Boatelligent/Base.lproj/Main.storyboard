@@ -202,6 +202,9 @@
                                 <rect key="frame" x="109" y="607" width="199" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Schedule Appointment"/>
+                                <connections>
+                                    <action selector="scheduleServiceTapped:" destination="pDE-TE-tTy" eventType="touchUpInside" id="pXY-st-jFd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -228,6 +231,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="serviceDatePicker" destination="FDc-Tj-cR6" id="Twh-u3-ZOO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="En0-Kw-J5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -427,20 +433,54 @@
                     <view key="view" contentMode="scaleToFill" id="uyl-bv-l1L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="9Pq-dw-5dU">
+                                <rect key="frame" x="40" y="323" width="334" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0V-OT-IHW">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="42"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebo-e2-jNx">
+                                        <rect key="frame" x="0.0" y="78" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bvW-8c-QgW">
+                                        <rect key="frame" x="0.0" y="144" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiX-RK-lpy">
+                                        <rect key="frame" x="0.0" y="210" width="334" height="30"/>
+                                        <state key="normal" title="Save New Password"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoatLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="kcz-0u-AEF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kcz-0u-AEF" firstAttribute="top" secondItem="9mN-jN-fod" secondAttribute="top" id="1f1-M6-bQa"/>
+                            <constraint firstItem="9mN-jN-fod" firstAttribute="trailing" secondItem="9Pq-dw-5dU" secondAttribute="trailing" constant="40" id="O5I-Wb-38h"/>
+                            <constraint firstItem="9mN-jN-fod" firstAttribute="bottom" secondItem="9Pq-dw-5dU" secondAttribute="bottom" constant="250" id="T2O-in-svM"/>
+                            <constraint firstItem="kcz-0u-AEF" firstAttribute="trailing" secondItem="9mN-jN-fod" secondAttribute="trailing" id="ah8-0X-mRc"/>
+                            <constraint firstItem="9Pq-dw-5dU" firstAttribute="leading" secondItem="9mN-jN-fod" secondAttribute="leading" constant="40" id="ggO-jF-ctT"/>
+                            <constraint firstItem="kcz-0u-AEF" firstAttribute="leading" secondItem="9mN-jN-fod" secondAttribute="leading" id="zsc-fN-FhA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9mN-jN-fod"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Forgot Password" id="4bf-3c-z5p">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jjh-4F-N8d">
-                            <connections>
-                                <action selector="cancelTapped:" destination="OQW-Wz-oUf" id="6wV-hP-nGN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Forgot Password" id="4bf-3c-z5p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jl3-Dy-WkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2897" y="-413"/>
+            <point key="canvasLocation" x="2894.202898550725" y="-413.16964285714283"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="HUF-Ru-P78">
