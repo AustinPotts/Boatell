@@ -66,6 +66,9 @@
                                     <constraint firstItem="AP6-2M-pBh" firstAttribute="top" secondItem="3kY-J9-fkW" secondAttribute="top" id="Xzg-fI-pCR"/>
                                     <constraint firstAttribute="bottom" secondItem="AP6-2M-pBh" secondAttribute="bottom" id="mN0-od-nfQ"/>
                                 </constraints>
+                                <connections>
+                                    <segue destination="xom-Ad-XcH" kind="show" identifier="PartViewSegue" id="5TW-aF-QO2"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -73,11 +76,74 @@
                             <outlet property="delegate" destination="qUP-be-yur" id="cjN-ym-xos"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Parts List" id="Crr-eM-pSM"/>
+                    <navigationItem key="navigationItem" title="Parts List" id="Crr-eM-pSM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Jce-cB-2wU"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpg-RG-qQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2117.3913043478265" y="102.45535714285714"/>
+            <point key="canvasLocation" x="2129" y="246"/>
+        </scene>
+        <!--Part View View Controller-->
+        <scene sceneID="icf-hJ-yJy">
+            <objects>
+                <viewController id="xom-Ad-XcH" customClass="PartViewViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F6N-Pr-hFK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hai-Zr-a78">
+                                <rect key="frame" x="50" y="459" width="314" height="124"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpC-Zd-c8Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="137.5" height="36"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part No." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TK-DA-F6M">
+                                        <rect key="frame" x="0.0" y="44" width="107.5" height="36"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0l-1f-3nR">
+                                        <rect key="frame" x="0.0" y="88" width="67" height="36"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoatLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="h62-wY-CTJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pip-DL-ijE">
+                                <rect key="frame" x="144" y="649" width="132" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Purchase Part"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-xQ-XXW">
+                                <rect key="frame" x="87" y="297" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6CY-Wo-jJd" firstAttribute="bottom" secondItem="hai-Zr-a78" secondAttribute="bottom" constant="230" id="LOM-ke-Gub"/>
+                            <constraint firstItem="6CY-Wo-jJd" firstAttribute="trailing" secondItem="pip-DL-ijE" secondAttribute="trailing" constant="138" id="SIs-Sa-Eg8"/>
+                            <constraint firstItem="6CY-Wo-jJd" firstAttribute="bottom" secondItem="pip-DL-ijE" secondAttribute="bottom" constant="128" id="gEC-Eo-l0d"/>
+                            <constraint firstItem="6CY-Wo-jJd" firstAttribute="trailing" secondItem="hai-Zr-a78" secondAttribute="trailing" constant="50" id="ted-UP-H3l"/>
+                            <constraint firstItem="hai-Zr-a78" firstAttribute="leading" secondItem="6CY-Wo-jJd" secondAttribute="leading" constant="50" id="teg-in-51Q"/>
+                            <constraint firstItem="pip-DL-ijE" firstAttribute="leading" secondItem="6CY-Wo-jJd" secondAttribute="leading" constant="144" id="ySB-QC-NXU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6CY-Wo-jJd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2rw-NA-iYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2926.0869565217395" y="245.75892857142856"/>
         </scene>
         <!--Parts-->
         <scene sceneID="NPH-Dh-y1f">
@@ -96,7 +162,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0j-KP-in1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207.2463768115942" y="102.45535714285714"/>
+            <point key="canvasLocation" x="1219" y="246"/>
+        </scene>
+        <!--Schedule Service-->
+        <scene sceneID="pCd-HE-XX1">
+            <objects>
+                <viewController id="pDE-TE-tTy" customClass="ScheduleServiceViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qaK-9f-Ne3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="one-tW-Byd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Schedule Service" id="Eo8-Aj-4ga">
+                        <barButtonItem key="rightBarButtonItem" title="Add Part" id="EA2-dh-7nZ">
+                            <connections>
+                                <segue destination="qUP-be-yur" kind="show" identifier="AddPartSegue" id="XJh-om-7IQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="En0-Kw-J5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2165.217391304348" y="1027.9017857142858"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="p2y-tM-Ebc">
@@ -111,11 +199,97 @@
                     <connections>
                         <segue destination="Ytd-19-7OM" kind="relationship" relationship="viewControllers" id="oRU-F4-sau"/>
                         <segue destination="cK0-gh-yuo" kind="relationship" relationship="viewControllers" id="65R-dv-oha"/>
+                        <segue destination="KhL-WW-mae" kind="relationship" relationship="viewControllers" id="TPZ-7i-PEw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVZ-BU-o6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="167" y="-202"/>
+        </scene>
+        <!--Create Profile View Controller-->
+        <scene sceneID="ziE-9o-QVj">
+            <objects>
+                <viewController id="nq1-1h-xv5" customClass="CreateProfileViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVq-uz-sbr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="SEr-15-wS5">
+                                <rect key="frame" x="40" y="246.5" width="334" height="422"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your Profile!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmV-C7-kPa">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="42"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2yx-r6-jaf">
+                                        <rect key="frame" x="0.0" y="88" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zda-Xj-uMV">
+                                        <rect key="frame" x="0.0" y="164" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wFh-3X-RRl">
+                                        <rect key="frame" x="0.0" y="240" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location/Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDr-8R-Fz4">
+                                        <rect key="frame" x="0.0" y="316" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Boat Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hIi-RZ-iJe">
+                                        <rect key="frame" x="0.0" y="392" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoatLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="ZdU-Yl-i2V">
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmA-8c-dJV">
+                                <rect key="frame" x="192" y="730" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lnu-8r-abP">
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="rHB-Cm-Oai">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="kAw-er-ERZ"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pgn-uZ-onx"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vEk-b8-oqq" firstAttribute="bottom" secondItem="SEr-15-wS5" secondAttribute="bottom" constant="193.5" id="2bz-2p-MGW"/>
+                            <constraint firstItem="ZdU-Yl-i2V" firstAttribute="trailing" secondItem="vEk-b8-oqq" secondAttribute="trailing" id="8bU-Pv-MhQ"/>
+                            <constraint firstItem="SEr-15-wS5" firstAttribute="leading" secondItem="vEk-b8-oqq" secondAttribute="leading" constant="40" id="ATE-bk-Fa9"/>
+                            <constraint firstItem="Lnu-8r-abP" firstAttribute="leading" secondItem="vEk-b8-oqq" secondAttribute="leading" id="P0O-0c-4vb"/>
+                            <constraint firstItem="Lnu-8r-abP" firstAttribute="trailing" secondItem="vEk-b8-oqq" secondAttribute="trailing" id="UaL-3X-KBx"/>
+                            <constraint firstAttribute="bottom" secondItem="Lnu-8r-abP" secondAttribute="bottom" id="YQr-eV-fO6"/>
+                            <constraint firstItem="ZdU-Yl-i2V" firstAttribute="top" secondItem="vEk-b8-oqq" secondAttribute="top" id="foH-bi-cZX"/>
+                            <constraint firstItem="vEk-b8-oqq" firstAttribute="trailing" secondItem="SEr-15-wS5" secondAttribute="trailing" constant="40" id="zXP-E1-fRJ"/>
+                            <constraint firstItem="ZdU-Yl-i2V" firstAttribute="leading" secondItem="vEk-b8-oqq" secondAttribute="leading" id="zhs-gd-h7O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vEk-b8-oqq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXb-e5-3rj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2129" y="-1307"/>
         </scene>
         <!--Log In-->
         <scene sceneID="PzU-tw-dio">
@@ -153,10 +327,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Log In"/>
+                                                <connections>
+                                                    <segue destination="Kfk-Pm-bcf" kind="show" identifier="LogInSegue" id="BhO-vp-AfH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibd-92-oDo">
                                                 <rect key="frame" x="0.0" y="41" width="374" height="30"/>
                                                 <state key="normal" title="Forgot Password"/>
+                                                <connections>
+                                                    <segue destination="OQW-Wz-oUf" kind="show" identifier="ForgotPasswordSegue" id="UVF-WP-BYe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -178,12 +358,171 @@
                         <viewLayoutGuide key="safeArea" id="gwx-Ik-5gn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="0TR-Tl-Tl8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bdq-bg-aLu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bdq-bg-aLu">
+                            <connections>
+                                <segue destination="nq1-1h-xv5" kind="presentation" identifier="CreateProfileModalSegue" id="47w-BU-WTK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PU5-Xt-bqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2128.985507246377" y="-621.42857142857144"/>
+        </scene>
+        <!--Forgot Password-->
+        <scene sceneID="Ih5-Lg-Pwo">
+            <objects>
+                <viewController id="OQW-Wz-oUf" customClass="EditProfileViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uyl-bv-l1L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="9mN-jN-fod"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Forgot Password" id="4bf-3c-z5p">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="jjh-4F-N8d"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jl3-Dy-WkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2897" y="-413"/>
+        </scene>
+        <!--My Profile-->
+        <scene sceneID="HUF-Ru-P78">
+            <objects>
+                <viewController id="Kfk-Pm-bcf" customClass="LogInProfileViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qhK-wx-sMx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ha9-ex-ti5">
+                                <rect key="frame" x="20" y="108" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="JJy-cF-3UZ"/>
+                                    <constraint firstAttribute="width" constant="240" id="uFn-Uq-AC9"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="jae-uh-TlM">
+                                <rect key="frame" x="20" y="270" width="149" height="189"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHa-Ue-EfY">
+                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38a-XU-MdK">
+                                        <rect key="frame" x="0.0" y="55" width="149" height="24"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVO-N7-Caq">
+                                        <rect key="frame" x="0.0" y="110" width="68" height="24"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boat Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCP-VN-6sh">
+                                        <rect key="frame" x="0.0" y="165" width="84" height="24"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jae-uh-TlM" firstAttribute="leading" secondItem="eu5-MS-xLB" secondAttribute="leading" constant="20" id="3xM-ur-K2t"/>
+                            <constraint firstItem="Ha9-ex-ti5" firstAttribute="top" secondItem="eu5-MS-xLB" secondAttribute="top" constant="20" id="9Ai-N9-qp7"/>
+                            <constraint firstItem="jae-uh-TlM" firstAttribute="top" secondItem="Ha9-ex-ti5" secondAttribute="bottom" constant="34" id="oyD-29-BAX"/>
+                            <constraint firstItem="Ha9-ex-ti5" firstAttribute="leading" secondItem="eu5-MS-xLB" secondAttribute="leading" constant="20" id="pgJ-6W-jj9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eu5-MS-xLB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Profile" id="IOe-RU-cwB">
+                        <barButtonItem key="rightBarButtonItem" title="Edit Profile" id="0Ag-fD-7ID">
+                            <connections>
+                                <segue destination="XkC-LR-F8B" kind="show" identifier="EditProfileSegue" id="49L-mS-zlq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqX-gW-Bry" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2870" y="-1080"/>
+        </scene>
+        <!--Edit Profile-->
+        <scene sceneID="G2p-3Y-3GE">
+            <objects>
+                <viewController id="XkC-LR-F8B" customClass="EditProfileViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3nv-zO-vB5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="dBR-qA-7sg">
+                                <rect key="frame" x="40" y="281" width="334" height="432"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvA-c4-Zme">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="42"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96i-cg-7PK">
+                                        <rect key="frame" x="0.0" y="90" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2do-bY-0gw">
+                                        <rect key="frame" x="0.0" y="168" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zQe-f2-oks">
+                                        <rect key="frame" x="0.0" y="246" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location/Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LiB-3b-pVo">
+                                        <rect key="frame" x="0.0" y="324" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Boat Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdT-tp-Byl">
+                                        <rect key="frame" x="0.0" y="402" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoatLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="Vwb-4N-7hG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fJg-bO-fy5" firstAttribute="bottom" secondItem="dBR-qA-7sg" secondAttribute="bottom" constant="100" id="2XJ-pb-6nq"/>
+                            <constraint firstItem="Vwb-4N-7hG" firstAttribute="top" secondItem="fJg-bO-fy5" secondAttribute="top" id="3rx-Yq-b5I"/>
+                            <constraint firstItem="Vwb-4N-7hG" firstAttribute="leading" secondItem="fJg-bO-fy5" secondAttribute="leading" id="G9p-7z-dLD"/>
+                            <constraint firstItem="Vwb-4N-7hG" firstAttribute="trailing" secondItem="fJg-bO-fy5" secondAttribute="trailing" id="hIL-UI-Wgf"/>
+                            <constraint firstItem="fJg-bO-fy5" firstAttribute="trailing" secondItem="dBR-qA-7sg" secondAttribute="trailing" constant="40" id="lOe-mY-pKF"/>
+                            <constraint firstItem="dBR-qA-7sg" firstAttribute="leading" secondItem="fJg-bO-fy5" secondAttribute="leading" constant="40" id="xiF-8s-tv6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fJg-bO-fy5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="e0F-Zf-QEG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="c0a-uA-FgH"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wt6-tF-jcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3657" y="-1334"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="N6A-Pa-p9U">
@@ -204,10 +543,33 @@
             </objects>
             <point key="canvasLocation" x="1218.840579710145" y="-621.42857142857144"/>
         </scene>
+        <!--Service-->
+        <scene sceneID="jeq-Gn-xAe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KhL-WW-mae" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Service" image="calendar-7" id="klg-2a-svN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Ha-j5-KF8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pDE-TE-tTy" kind="relationship" relationship="rootViewController" id="StX-RE-Xi7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5S-7o-TlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1253.6231884057972" y="1027.9017857142858"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BoatLogoWhite" width="200" height="200"/>
+        <image name="calendar-7" width="30" height="30"/>
         <image name="circle-user-7" width="30" height="30"/>
         <image name="gear-7" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XJh-om-7IQ"/>
+    </inferredMetricsTieBreakers>
 </document>
