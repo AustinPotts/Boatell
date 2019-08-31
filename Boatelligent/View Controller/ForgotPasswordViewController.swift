@@ -10,6 +10,9 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
+    @IBAction func cancelTapped(_ sender: Any) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

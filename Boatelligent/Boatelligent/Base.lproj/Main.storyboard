@@ -182,7 +182,43 @@
                     <view key="view" contentMode="scaleToFill" id="qaK-9f-Ne3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FDc-Tj-cR6">
+                                <rect key="frame" x="0.0" y="367" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="588955064.86600697">
+                                    <!--2019-08-31 14:37:44 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqZ-NX-l4G">
+                                <rect key="frame" x="96" y="321" width="222" height="36"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoatLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="fn4-oj-nQW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr9-xZ-U2d">
+                                <rect key="frame" x="109" y="607" width="199" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Schedule Appointment"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fn4-oj-nQW" firstAttribute="trailing" secondItem="one-tW-Byd" secondAttribute="trailing" id="4U5-Ei-KJ0"/>
+                            <constraint firstItem="fn4-oj-nQW" firstAttribute="top" secondItem="one-tW-Byd" secondAttribute="top" id="5Vm-bQ-Yi0"/>
+                            <constraint firstItem="xr9-xZ-U2d" firstAttribute="top" secondItem="FDc-Tj-cR6" secondAttribute="bottom" constant="24" id="6PJ-qo-24p"/>
+                            <constraint firstItem="xr9-xZ-U2d" firstAttribute="leading" secondItem="one-tW-Byd" secondAttribute="leading" constant="109" id="8Bs-3e-8Nd"/>
+                            <constraint firstItem="fn4-oj-nQW" firstAttribute="leading" secondItem="one-tW-Byd" secondAttribute="leading" id="C9P-UW-5qu"/>
+                            <constraint firstItem="FDc-Tj-cR6" firstAttribute="trailing" secondItem="one-tW-Byd" secondAttribute="trailing" id="ERO-hR-Aqg"/>
+                            <constraint firstItem="one-tW-Byd" firstAttribute="bottom" secondItem="FDc-Tj-cR6" secondAttribute="bottom" constant="230" id="FYB-LN-N0y"/>
+                            <constraint firstItem="FDc-Tj-cR6" firstAttribute="leading" secondItem="one-tW-Byd" secondAttribute="leading" id="OyO-Pc-R3s"/>
+                            <constraint firstItem="tqZ-NX-l4G" firstAttribute="leading" secondItem="one-tW-Byd" secondAttribute="leading" constant="96" id="QNg-af-Wfa"/>
+                            <constraint firstItem="FDc-Tj-cR6" firstAttribute="top" secondItem="tqZ-NX-l4G" secondAttribute="bottom" constant="10" id="eNx-az-Oyv"/>
+                            <constraint firstItem="one-tW-Byd" firstAttribute="trailing" secondItem="xr9-xZ-U2d" secondAttribute="trailing" constant="106" id="fL6-bF-UD4"/>
+                            <constraint firstItem="one-tW-Byd" firstAttribute="trailing" secondItem="tqZ-NX-l4G" secondAttribute="trailing" constant="96" id="mbi-aE-JhF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="one-tW-Byd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule Service" id="Eo8-Aj-4ga">
@@ -277,7 +313,11 @@
                                 <rect key="frame" x="0.0" y="852" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="rHB-Cm-Oai">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="kAw-er-ERZ"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="kAw-er-ERZ">
+                                            <connections>
+                                                <action selector="cancelTapped:" destination="nq1-1h-xv5" id="o0V-Hi-zdI"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="pgn-uZ-onx"/>
                                     </navigationItem>
                                 </items>
@@ -344,7 +384,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibd-92-oDo">
                                                 <rect key="frame" x="0.0" y="41" width="374" height="30"/>
-                                                <state key="normal" title="Forgot Password"/>
+                                                <state key="normal" title="Forgot Password?"/>
                                                 <connections>
                                                     <segue destination="OQW-Wz-oUf" kind="show" identifier="ForgotPasswordSegue" id="UVF-WP-BYe"/>
                                                 </connections>
@@ -383,7 +423,7 @@
         <!--Forgot Password-->
         <scene sceneID="Ih5-Lg-Pwo">
             <objects>
-                <viewController id="OQW-Wz-oUf" customClass="EditProfileViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OQW-Wz-oUf" customClass="ForgotPasswordViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uyl-bv-l1L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,7 +431,11 @@
                         <viewLayoutGuide key="safeArea" id="9mN-jN-fod"/>
                     </view>
                     <navigationItem key="navigationItem" title="Forgot Password" id="4bf-3c-z5p">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="jjh-4F-N8d"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jjh-4F-N8d">
+                            <connections>
+                                <action selector="cancelTapped:" destination="OQW-Wz-oUf" id="6wV-hP-nGN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jl3-Dy-WkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
