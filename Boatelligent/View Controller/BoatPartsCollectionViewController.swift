@@ -12,6 +12,12 @@ private let reuseIdentifier = "Cell"
 
 class BoatPartsCollectionViewController: UICollectionViewController {
 
+    
+    let partController = PartController()
+        
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,20 +44,21 @@ class BoatPartsCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return partController.part.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+      guard  let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PartCell", for: indexPath) as? PartCollectionViewCell else {return UICollectionViewCell()}
     
         // Configure the cell
-    
+        let part = partController.part[indexPath.item]
+        cell.parts = part
         return cell
     }
 
