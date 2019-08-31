@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cSZ-w4-QTu">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Boat Parts Collection View Controller-->
+        <!--Parts List-->
         <scene sceneID="qfV-hP-xhC">
             <objects>
                 <collectionViewController id="qUP-be-yur" customClass="BoatPartsCollectionViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Fov-L4-9Yq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zA6-wg-pae">
                             <size key="itemSize" width="150" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -72,17 +73,17 @@
                             <outlet property="delegate" destination="qUP-be-yur" id="cjN-ym-xos"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Crr-eM-pSM"/>
+                    <navigationItem key="navigationItem" title="Parts List" id="Crr-eM-pSM"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpg-RG-qQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2117.3913043478265" y="102.45535714285714"/>
         </scene>
-        <!--Item-->
+        <!--Parts-->
         <scene sceneID="NPH-Dh-y1f">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cK0-gh-yuo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HhR-iU-3y8"/>
+                    <tabBarItem key="tabBarItem" title="Parts" image="gear-7" id="HhR-iU-3y8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KCc-9q-LhL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -103,16 +104,110 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cSZ-w4-QTu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UjE-Aq-Je2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Ytd-19-7OM" kind="relationship" relationship="viewControllers" id="oRU-F4-sau"/>
                         <segue destination="cK0-gh-yuo" kind="relationship" relationship="viewControllers" id="65R-dv-oha"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVZ-BU-o6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314" y="-2"/>
+            <point key="canvasLocation" x="167" y="-202"/>
+        </scene>
+        <!--Log In-->
+        <scene sceneID="PzU-tw-dio">
+            <objects>
+                <viewController id="dbV-8h-vVV" customClass="MyProfileViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O6g-Bg-gbL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="qIW-ge-GgU">
+                                <rect key="frame" x="20" y="335" width="374" height="326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Log In!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxW-aK-gZK">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Cf-YP-jGF">
+                                        <rect key="frame" x="0.0" y="97" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Xd-nA-I69">
+                                        <rect key="frame" x="0.0" y="176" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mLG-1i-iDl">
+                                        <rect key="frame" x="0.0" y="255" width="374" height="71"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zX-Gs-lwg">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Log In"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibd-92-oDo">
+                                                <rect key="frame" x="0.0" y="41" width="374" height="30"/>
+                                                <state key="normal" title="Forgot Password"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoatLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="9tc-DR-GMW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5817476309021038" green="0.80969920242174254" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gwx-Ik-5gn" firstAttribute="trailing" secondItem="qIW-ge-GgU" secondAttribute="trailing" constant="20" id="5mO-2Z-6q0"/>
+                            <constraint firstItem="qIW-ge-GgU" firstAttribute="leading" secondItem="gwx-Ik-5gn" secondAttribute="leading" constant="20" id="KYn-ow-9gN"/>
+                            <constraint firstItem="9tc-DR-GMW" firstAttribute="top" secondItem="gwx-Ik-5gn" secondAttribute="top" id="jPC-Lx-81G"/>
+                            <constraint firstItem="9tc-DR-GMW" firstAttribute="leading" secondItem="gwx-Ik-5gn" secondAttribute="leading" id="jQs-GW-28x"/>
+                            <constraint firstItem="9tc-DR-GMW" firstAttribute="trailing" secondItem="gwx-Ik-5gn" secondAttribute="trailing" id="ydm-dc-hpS"/>
+                            <constraint firstItem="qIW-ge-GgU" firstAttribute="top" secondItem="gwx-Ik-5gn" secondAttribute="top" constant="247" id="ymA-n2-niz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gwx-Ik-5gn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log In" id="0TR-Tl-Tl8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bdq-bg-aLu"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PU5-Xt-bqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2128.985507246377" y="-621.42857142857144"/>
+        </scene>
+        <!--My Profile-->
+        <scene sceneID="N6A-Pa-p9U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ytd-19-7OM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Profile" image="circle-user-7" id="Ek3-fw-tu0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lmx-bw-nV3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dbV-8h-vVV" kind="relationship" relationship="rootViewController" id="JS1-74-wzr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1a-Jd-IGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218.840579710145" y="-621.42857142857144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BoatLogoWhite" width="200" height="200"/>
+        <image name="circle-user-7" width="30" height="30"/>
+        <image name="gear-7" width="30" height="30"/>
+    </resources>
 </document>
