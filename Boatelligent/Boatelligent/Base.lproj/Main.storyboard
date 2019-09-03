@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zA6-wg-pae">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="zA6-wg-pae">
                             <size key="itemSize" width="120" height="120"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -38,11 +38,18 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="daA-Be-xaX">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zaz-3E-ebA">
-                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="99"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P82-qY-eRP">
+                                                            <rect key="frame" x="45" y="0.0" width="30" height="30"/>
+                                                            <state key="normal" title="Add"/>
+                                                            <connections>
+                                                                <action selector="addPartTapped:" destination="3kY-J9-fkW" eventType="touchUpInside" id="3KB-4g-xbO"/>
+                                                            </connections>
+                                                        </button>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="zaz-3E-ebA">
+                                                            <rect key="frame" x="0.0" y="30" width="120" height="69.5"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pY-mR-WX6">
-                                                            <rect key="frame" x="39" y="99" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pY-mR-WX6">
+                                                            <rect key="frame" x="39" y="99.5" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -253,11 +260,12 @@
                         <segue destination="Ytd-19-7OM" kind="relationship" relationship="viewControllers" id="oRU-F4-sau"/>
                         <segue destination="cK0-gh-yuo" kind="relationship" relationship="viewControllers" id="65R-dv-oha"/>
                         <segue destination="KhL-WW-mae" kind="relationship" relationship="viewControllers" id="TPZ-7i-PEw"/>
+                        <segue destination="3Zg-zU-rMY" kind="relationship" relationship="viewControllers" id="6mT-P6-lfI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVZ-BU-o6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="-202"/>
+            <point key="canvasLocation" x="-548" y="459"/>
         </scene>
         <!--Create Profile View Controller-->
         <scene sceneID="ziE-9o-QVj">
@@ -657,12 +665,48 @@
             </objects>
             <point key="canvasLocation" x="1253.6231884057972" y="1027.9017857142858"/>
         </scene>
+        <!--My Cart-->
+        <scene sceneID="XGV-21-c25">
+            <objects>
+                <viewController id="8Ki-jG-T5p" customClass="MyCartViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3iF-PA-oLa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="xU6-qg-ZJk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Cart" id="gwn-VE-AE4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9TX-eV-ON1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2168.1159420289855" y="1737.7232142857142"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="2ja-W8-ryN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Zg-zU-rMY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cart" image="shopping-cart-7" id="R1d-Wq-zk4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qst-a8-Izu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Ki-jG-T5p" kind="relationship" relationship="rootViewController" id="UIq-4K-7DV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4M-G8-HJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257.9710144927537" y="1737.7232142857142"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BoatLogoWhite" width="200" height="200"/>
         <image name="calendar-7" width="30" height="30"/>
         <image name="circle-user-7" width="30" height="30"/>
         <image name="gear-7" width="30" height="30"/>
+        <image name="shopping-cart-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XJh-om-7IQ"/>

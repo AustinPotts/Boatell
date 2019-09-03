@@ -22,6 +22,7 @@
 		451F69B3231A0F0100B19E07 /* ScheduleServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B2231A0F0100B19E07 /* ScheduleServiceViewController.swift */; };
 		451F69B8231A120B00B19E07 /* PartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B7231A120B00B19E07 /* PartController.swift */; };
 		451F69BA231A125000B19E07 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B9231A125000B19E07 /* Part.swift */; };
+		451F69BD231B2ADA00B19E07 /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69BC231B2ADA00B19E07 /* MyCartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		451F69B2231A0F0100B19E07 /* ScheduleServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleServiceViewController.swift; sourceTree = "<group>"; };
 		451F69B7231A120B00B19E07 /* PartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartController.swift; sourceTree = "<group>"; };
 		451F69B9231A125000B19E07 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
+		451F69BC231B2ADA00B19E07 /* MyCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		450949CE2319F3AB001C77C2 = {
 			isa = PBXGroup;
 			children = (
+				451F69BC231B2ADA00B19E07 /* MyCartViewController.swift */,
 				451F69BB231A147900B19E07 /* Model Controller */,
 				451F69B6231A11EC00B19E07 /* Model */,
 				451F69B5231A116100B19E07 /* View Controller */,
@@ -206,6 +209,7 @@
 				450949F3231A00C8001C77C2 /* CreateProfileViewController.swift in Sources */,
 				451F69B1231A0C8800B19E07 /* PartViewViewController.swift in Sources */,
 				451F69B3231A0F0100B19E07 /* ScheduleServiceViewController.swift in Sources */,
+				451F69BD231B2ADA00B19E07 /* MyCartViewController.swift in Sources */,
 				450949ED2319F415001C77C2 /* BoatPartsCollectionViewController.swift in Sources */,
 				451F69B8231A120B00B19E07 /* PartController.swift in Sources */,
 				451F69AD231A088B00B19E07 /* EditProfileViewController.swift in Sources */,

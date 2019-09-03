@@ -13,6 +13,8 @@ class PartCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var partNameLabel: UILabel!
     @IBOutlet weak var partImage: UIImageView!
     
+    @IBAction func addPartTapped(_ sender: Any) {
+    }
     var parts: Part?{
         didSet{
             updateViews()
