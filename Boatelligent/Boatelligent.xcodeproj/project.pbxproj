@@ -16,13 +16,12 @@
 		450949F12319F6F5001C77C2 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450949F02319F6F5001C77C2 /* MyProfileViewController.swift */; };
 		450949F3231A00C8001C77C2 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450949F2231A00C8001C77C2 /* CreateProfileViewController.swift */; };
 		451F69AB231A06C100B19E07 /* LogInProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69AA231A06C100B19E07 /* LogInProfileViewController.swift */; };
-		451F69AD231A088B00B19E07 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69AC231A088B00B19E07 /* EditProfileViewController.swift */; };
-		451F69AF231A0B9600B19E07 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69AE231A0B9600B19E07 /* ForgotPasswordViewController.swift */; };
 		451F69B1231A0C8800B19E07 /* PartViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B0231A0C8800B19E07 /* PartViewViewController.swift */; };
 		451F69B3231A0F0100B19E07 /* ScheduleServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B2231A0F0100B19E07 /* ScheduleServiceViewController.swift */; };
 		451F69B8231A120B00B19E07 /* PartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B7231A120B00B19E07 /* PartController.swift */; };
 		451F69BA231A125000B19E07 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B9231A125000B19E07 /* Part.swift */; };
 		451F69BD231B2ADA00B19E07 /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69BC231B2ADA00B19E07 /* MyCartViewController.swift */; };
+		4547308E235265A700EB74F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4547308D235265A700EB74F4 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,13 +36,12 @@
 		450949F02319F6F5001C77C2 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		450949F2231A00C8001C77C2 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		451F69AA231A06C100B19E07 /* LogInProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInProfileViewController.swift; sourceTree = "<group>"; };
-		451F69AC231A088B00B19E07 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		451F69AE231A0B9600B19E07 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		451F69B0231A0C8800B19E07 /* PartViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartViewViewController.swift; sourceTree = "<group>"; };
 		451F69B2231A0F0100B19E07 /* ScheduleServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleServiceViewController.swift; sourceTree = "<group>"; };
 		451F69B7231A120B00B19E07 /* PartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartController.swift; sourceTree = "<group>"; };
 		451F69B9231A125000B19E07 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		451F69BC231B2ADA00B19E07 /* MyCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
+		4547308D235265A700EB74F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +91,7 @@
 		451F69B4231A115100B19E07 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4547308D235265A700EB74F4 /* LoginView.swift */,
 				450949EE2319F47E001C77C2 /* PartCollectionViewCell.swift */,
 			);
 			path = Views;
@@ -102,8 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				451F69B0231A0C8800B19E07 /* PartViewViewController.swift */,
-				451F69AE231A0B9600B19E07 /* ForgotPasswordViewController.swift */,
-				451F69AC231A088B00B19E07 /* EditProfileViewController.swift */,
 				451F69AA231A06C100B19E07 /* LogInProfileViewController.swift */,
 				450949F2231A00C8001C77C2 /* CreateProfileViewController.swift */,
 				450949F02319F6F5001C77C2 /* MyProfileViewController.swift */,
@@ -200,19 +197,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				451F69AF231A0B9600B19E07 /* ForgotPasswordViewController.swift in Sources */,
 				450949EF2319F47E001C77C2 /* PartCollectionViewCell.swift in Sources */,
 				450949DB2319F3AB001C77C2 /* AppDelegate.swift in Sources */,
 				451F69AB231A06C100B19E07 /* LogInProfileViewController.swift in Sources */,
 				451F69BA231A125000B19E07 /* Part.swift in Sources */,
 				450949F12319F6F5001C77C2 /* MyProfileViewController.swift in Sources */,
 				450949F3231A00C8001C77C2 /* CreateProfileViewController.swift in Sources */,
+				4547308E235265A700EB74F4 /* LoginView.swift in Sources */,
 				451F69B1231A0C8800B19E07 /* PartViewViewController.swift in Sources */,
 				451F69B3231A0F0100B19E07 /* ScheduleServiceViewController.swift in Sources */,
 				451F69BD231B2ADA00B19E07 /* MyCartViewController.swift in Sources */,
 				450949ED2319F415001C77C2 /* BoatPartsCollectionViewController.swift in Sources */,
 				451F69B8231A120B00B19E07 /* PartController.swift in Sources */,
-				451F69AD231A088B00B19E07 /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
