@@ -20,13 +20,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoatLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="9nt-fQ-ajQ">
-                                <rect key="frame" x="0.0" y="335" width="414" height="192"/>
+                                <rect key="frame" x="0.0" y="284" width="414" height="328"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9nt-fQ-ajQ" secondAttribute="bottom" constant="335" id="Dv3-kZ-Jgm"/>
-                            <constraint firstItem="9nt-fQ-ajQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="291" id="KiY-fq-P8y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9nt-fQ-ajQ" secondAttribute="bottom" constant="250" id="Dv3-kZ-Jgm"/>
+                            <constraint firstItem="9nt-fQ-ajQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="KiY-fq-P8y"/>
                             <constraint firstItem="9nt-fQ-ajQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nfl-Mq-KCE"/>
                             <constraint firstItem="9nt-fQ-ajQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vtk-ML-CJi"/>
                         </constraints>

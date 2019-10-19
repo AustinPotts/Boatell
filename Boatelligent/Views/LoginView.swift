@@ -55,7 +55,7 @@ class LoginView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.9411764706, blue: 0.9450980392, alpha: 1)
-        view.layer.cornerRadius =   30
+        view.layer.cornerRadius =   10
         return view
     }()
     
@@ -63,7 +63,7 @@ class LoginView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.9411764706, blue: 0.9450980392, alpha: 1)
-        view.layer.cornerRadius = 30
+        view.layer.cornerRadius = 10
         return view
     }()
     
@@ -101,7 +101,7 @@ class LoginView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-        view.layer.cornerRadius =   30
+        view.layer.cornerRadius =   10
         return view
     }()
     
@@ -111,7 +111,7 @@ class LoginView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-        view.layer.cornerRadius =   30
+        view.layer.cornerRadius =   10
         return view
     }()
     

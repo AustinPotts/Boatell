@@ -7,19 +7,35 @@
 //
 
 import UIKit
+import FSCalendar
 
 class ScheduleServiceViewController: UIViewController {
 
     
-    @IBOutlet weak var serviceDatePicker: UIDatePicker!
+//    @IBOutlet weak var serviceDatePicker: UIDatePicker!
+//
+//
+//    @IBAction func scheduleServiceTapped(_ sender: Any) {
+//        showAlert()
+//    }
     
-  
-    @IBAction func scheduleServiceTapped(_ sender: Any) {
-        showAlert()
-    }
+    fileprivate weak var calendar: FSCalendar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let calendar = FSCalendar(frame: CGRect(x: 20, y: 20, width: 320, height: 300))
+        calendar.dataSource = self
+        calendar.delegate = self
+        calendar.register(FSCalendarCell.self, forCellReuseIdentifier: "CELL")
+        calendar.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(calendar)
+        self.calendar = calendar
+        
+        calendar.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        calendar.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        calendar.heightAnchor.constraint(equalToConstant: 375).isActive = true
+        calendar.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
 
         // Do any additional setup after loading the view.
     }
@@ -42,4 +58,21 @@ class ScheduleServiceViewController: UIViewController {
     }
     */
 
+}
+
+extension ScheduleServiceViewController: FSCalendarDelegate, FSCalendarDataSource {
+//    func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
+//        return "America"
+//    }
+//
+//    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
+//        return "Rules"
+//    }
+    
+    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
+        let cell = calendar.dequeueReusableCell(withIdentifier: "CELL", for: date, at: position)
+        
+        return cell
+    }
+    
 }
