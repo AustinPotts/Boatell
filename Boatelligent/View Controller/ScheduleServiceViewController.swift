@@ -15,9 +15,9 @@ class ScheduleServiceViewController: UIViewController {
 //    @IBOutlet weak var serviceDatePicker: UIDatePicker!
 //
 //
-//    @IBAction func scheduleServiceTapped(_ sender: Any) {
-//        showAlert()
-//    }
+    @IBAction func scheduleServiceTapped(_ sender: Any) {
+        showAlert()
+    }
     
     fileprivate weak var calendar: FSCalendar!
     
@@ -28,13 +28,16 @@ class ScheduleServiceViewController: UIViewController {
         calendar.dataSource = self
         calendar.delegate = self
         calendar.register(FSCalendarCell.self, forCellReuseIdentifier: "CELL")
+        calendar.backgroundColor = .white
+        calendar.layer.cornerRadius = 20
+        calendar.layer.shadowRadius = 20
         calendar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(calendar)
         self.calendar = calendar
         
         calendar.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         calendar.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        calendar.heightAnchor.constraint(equalToConstant: 375).isActive = true
+        calendar.heightAnchor.constraint(equalToConstant: 485).isActive = true
         calendar.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
 
         // Do any additional setup after loading the view.
@@ -74,5 +77,7 @@ extension ScheduleServiceViewController: FSCalendarDelegate, FSCalendarDataSourc
         
         return cell
     }
+    
+    
     
 }
