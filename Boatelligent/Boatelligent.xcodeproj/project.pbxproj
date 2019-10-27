@@ -21,6 +21,7 @@
 		451F69BA231A125000B19E07 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B9231A125000B19E07 /* Part.swift */; };
 		451F69BD231B2ADA00B19E07 /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69BC231B2ADA00B19E07 /* MyCartViewController.swift */; };
 		453B796A2364DDEC0035AB19 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B79692364DDEC0035AB19 /* ServicesViewController.swift */; };
+		453B796E236572940035AB19 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B796D236572940035AB19 /* TestViewController.swift */; };
 		4547308E235265A700EB74F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4547308D235265A700EB74F4 /* LoginView.swift */; };
 		A9E6C58F1AAF82CF19F389D0 /* Pods_Boatelligent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D750CB93A311B1BE7B53F /* Pods_Boatelligent.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		451F69B9231A125000B19E07 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		451F69BC231B2ADA00B19E07 /* MyCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
 		453B79692364DDEC0035AB19 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		453B796D236572940035AB19 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4547308D235265A700EB74F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		505D750CB93A311B1BE7B53F /* Pods_Boatelligent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boatelligent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		593D447B56C3B8E97982B126 /* Pods-Boatelligent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boatelligent.debug.xcconfig"; path = "Target Support Files/Pods-Boatelligent/Pods-Boatelligent.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		450949CE2319F3AB001C77C2 = {
 			isa = PBXGroup;
 			children = (
+				453B796D236572940035AB19 /* TestViewController.swift */,
 				453B79692364DDEC0035AB19 /* ServicesViewController.swift */,
 				451F69BB231A147900B19E07 /* Model Controller */,
 				451F69B6231A11EC00B19E07 /* Model */,
@@ -270,6 +273,7 @@
 				451F69AB231A06C100B19E07 /* LogInProfileViewController.swift in Sources */,
 				453B796A2364DDEC0035AB19 /* ServicesViewController.swift in Sources */,
 				451F69BA231A125000B19E07 /* Part.swift in Sources */,
+				453B796E236572940035AB19 /* TestViewController.swift in Sources */,
 				450949F12319F6F5001C77C2 /* MyProfileViewController.swift in Sources */,
 				450949F3231A00C8001C77C2 /* CreateProfileViewController.swift in Sources */,
 				4547308E235265A700EB74F4 /* LoginView.swift in Sources */,

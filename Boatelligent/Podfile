@@ -6,5 +6,6 @@ target 'Boatelligent' do
   use_frameworks!
 
   pod 'FSCalendar'
+  pod 'GlidingCollection'
 
 end

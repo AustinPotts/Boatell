@@ -1,16 +1,20 @@
 PODS:
   - FSCalendar (2.8.0)
+  - GlidingCollection (2.1.0)
 
 DEPENDENCIES:
   - FSCalendar
+  - GlidingCollection
 
 SPEC REPOS:
   trunk:
     - FSCalendar
+    - GlidingCollection
 
 SPEC CHECKSUMS:
   FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
+  GlidingCollection: a15dbd9ec1775c781453bc36e6104d0c9dec20fb
 
-PODFILE CHECKSUM: 6b2487d02f08621b8d33f6b766ef8425f8e82a55
+PODFILE CHECKSUM: 6b3252f905e6e1e521869754e8b5f3cb5ff608f7
 
 COCOAPODS: 1.8.4

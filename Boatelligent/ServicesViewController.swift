@@ -35,6 +35,10 @@ class ServicesViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     */
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.width/2.5)
+        }
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
               // #warning Incomplete implementation, return the number of sections
@@ -64,6 +68,8 @@ class ServicesViewController: UIViewController, UICollectionViewDelegate, UIColl
            
        }
     }
+    
+ 
     
     
     

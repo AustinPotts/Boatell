@@ -21,7 +21,7 @@
                                 <rect key="frame" x="1" y="327" width="412" height="66"/>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boatSign2" translatesAutoresizingMaskIntoConstraints="NO" id="aaR-0T-tOH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMu-qn-i55">
                                 <rect key="frame" x="20" y="708" width="374" height="40"/>
@@ -49,11 +49,11 @@
                         <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CCw-Io-Zda" firstAttribute="top" secondItem="one-tW-Byd" secondAttribute="top" constant="30" id="0Xo-b5-Xyh"/>
+                            <constraint firstAttribute="bottom" secondItem="aaR-0T-tOH" secondAttribute="bottom" id="8GP-lb-qUk"/>
                             <constraint firstItem="aaR-0T-tOH" firstAttribute="trailing" secondItem="one-tW-Byd" secondAttribute="trailing" id="8Uu-61-VKo"/>
                             <constraint firstItem="one-tW-Byd" firstAttribute="trailing" secondItem="7R9-51-taY" secondAttribute="trailing" constant="1" id="Ao0-sm-Ous"/>
                             <constraint firstItem="7R9-51-taY" firstAttribute="top" secondItem="one-tW-Byd" secondAttribute="top" constant="327" id="DlU-01-CNZ"/>
                             <constraint firstAttribute="bottom" secondItem="7R9-51-taY" secondAttribute="bottom" constant="449" id="DrG-uk-JVm"/>
-                            <constraint firstItem="aaR-0T-tOH" firstAttribute="bottom" secondItem="one-tW-Byd" secondAttribute="bottom" id="EyS-TN-yBT"/>
                             <constraint firstItem="one-tW-Byd" firstAttribute="trailing" secondItem="aMu-qn-i55" secondAttribute="trailing" constant="20" id="FQw-Ft-xMN"/>
                             <constraint firstItem="aaR-0T-tOH" firstAttribute="leading" secondItem="qaK-9f-Ne3" secondAttribute="leading" id="Imp-Ty-JRX"/>
                             <constraint firstItem="aMu-qn-i55" firstAttribute="leading" secondItem="one-tW-Byd" secondAttribute="leading" constant="20" id="Wjj-qa-Q0t"/>
@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="En0-Kw-J5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="234"/>
+            <point key="canvasLocation" x="2200" y="233.70535714285714"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="x3e-jC-yK6">
@@ -195,17 +195,35 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UjE-Aq-Je2">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.65052825209999998" green="0.77346390490000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.8918799758" green="0.93652892109999997" blue="0.997484386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="dbV-8h-vVV" kind="relationship" relationship="viewControllers" id="35a-UL-Qty"/>
-                        <segue destination="3Zg-zU-rMY" kind="relationship" relationship="viewControllers" id="6mT-P6-lfI"/>
                         <segue destination="b8y-uR-aEZ" kind="relationship" relationship="viewControllers" id="UQW-Hh-Nsj"/>
+                        <segue destination="8Ki-jG-T5p" kind="relationship" relationship="viewControllers" id="ODq-e7-y8N"/>
+                        <segue destination="Xlp-rU-ja5" kind="relationship" relationship="viewControllers" id="sOn-Rh-cjT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVZ-BU-o6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-548" y="459"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="IPQ-s4-0Go">
+            <objects>
+                <viewController id="Xlp-rU-ja5" customClass="TestViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EEF-Os-TvR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uBO-Ms-vTv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="TVY-vP-Ojw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JeS-Zt-Cwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-374" y="-326"/>
         </scene>
         <!--Log In-->
         <scene sceneID="PzU-tw-dio">
@@ -245,33 +263,26 @@
                     <view key="view" contentMode="scaleToFill" id="3iF-PA-oLa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boatSign2" translatesAutoresizingMaskIntoConstraints="NO" id="ldN-91-vur">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.58174763090000003" green="0.80969920240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ldN-91-vur" firstAttribute="trailing" secondItem="xU6-qg-ZJk" secondAttribute="trailing" id="Qo8-GW-e6L"/>
+                            <constraint firstAttribute="bottom" secondItem="ldN-91-vur" secondAttribute="bottom" id="auv-n4-WNi"/>
+                            <constraint firstItem="ldN-91-vur" firstAttribute="leading" secondItem="xU6-qg-ZJk" secondAttribute="leading" id="d6m-tF-IOq"/>
+                            <constraint firstItem="ldN-91-vur" firstAttribute="top" secondItem="3iF-PA-oLa" secondAttribute="top" id="oz6-LL-ItJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xU6-qg-ZJk"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Checkout" image="shopping-cart-7" id="lJy-zD-DRN"/>
                     <navigationItem key="navigationItem" title="My Cart" id="gwn-VE-AE4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9TX-eV-ON1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2168.1159420289855" y="1737.7232142857142"/>
-        </scene>
-        <!--Cart-->
-        <scene sceneID="2ja-W8-ryN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Zg-zU-rMY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cart" image="shopping-cart-7" id="R1d-Wq-zk4"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qst-a8-Izu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8Ki-jG-T5p" kind="relationship" relationship="rootViewController" id="UIq-4K-7DV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l4M-G8-HJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1257.9710144927537" y="1737.7232142857142"/>
+            <point key="canvasLocation" x="1258" y="995"/>
         </scene>
     </scenes>
     <resources>
