@@ -47,9 +47,9 @@ class ServicesViewController: UIViewController {
 
         view.addSubview(collectionView)
         collectionView.backgroundColor = .clear
-        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 330).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15).isActive = true
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 245).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
         
 //        collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: 0.5).isActive = true
