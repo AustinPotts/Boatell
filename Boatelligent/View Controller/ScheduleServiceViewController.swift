@@ -11,7 +11,7 @@ import FSCalendar
 
 class ScheduleServiceViewController: UIViewController {
 
-    
+    var part: Part?
 //    @IBOutlet weak var serviceDatePicker: UIDatePicker!
 //
 //

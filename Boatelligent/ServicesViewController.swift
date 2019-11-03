@@ -27,6 +27,10 @@ class ServicesViewController: UIViewController {
             CustomData(title: "Idk", image: #imageLiteral(resourceName: "Lights"), url: "part"),
             CustomData(title: "Idk", image: #imageLiteral(resourceName: "Saw2"), url: "part"),
             CustomData(title: "Idk", image: #imageLiteral(resourceName: "Anchor"), url: "part"),
+            CustomData(title: "Idk", image: #imageLiteral(resourceName: "Time"), url: "part"),
+            CustomData(title: "Idk", image: #imageLiteral(resourceName: "SharpKnife"), url: "part"),
+            CustomData(title: "Idk", image: #imageLiteral(resourceName: "Cut"), url: "part"),
+            CustomData(title: "Idk", image: #imageLiteral(resourceName: "Gadget"), url: "part"),
             
             
             ]
@@ -50,7 +54,7 @@ class ServicesViewController: UIViewController {
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 245).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -0).isActive = true
         
 //        collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: 0.5).isActive = true
 //
@@ -92,7 +96,7 @@ extension ServicesViewController: UICollectionViewDelegateFlowLayout, UICollecti
        
      
        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         return partController.part.count
+        return data.count
        }
         
       
@@ -108,14 +112,18 @@ extension ServicesViewController: UICollectionViewDelegateFlowLayout, UICollecti
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewCalendarSegue" {
-            guard let indexPath = serviceCollectionView.indexPathsForSelectedItems?.first?.item,
-                let partSelectVC = segue.destination as? PartViewViewController else{return}
+            guard let indexPath = collectionView.indexPathsForSelectedItems?.first?.item,
+                let partSelectVC = segue.destination as? ScheduleServiceViewController else{return}
             
             let selectedPart = partController.part[indexPath]
             partSelectVC.part = selectedPart
             
         }
      }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ViewCalendarSegue", sender: indexPath)
+    }
     
     
     

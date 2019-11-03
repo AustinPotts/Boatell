@@ -23,6 +23,7 @@
 		453B796A2364DDEC0035AB19 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B79692364DDEC0035AB19 /* ServicesViewController.swift */; };
 		453B796E236572940035AB19 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B796D236572940035AB19 /* TestViewController.swift */; };
 		4547308E235265A700EB74F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4547308D235265A700EB74F4 /* LoginView.swift */; };
+		4557273A236E5F0200BFDAC0 /* Login copy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45572739236E5F0200BFDAC0 /* Login copy.storyboard */; };
 		A9E6C58F1AAF82CF19F389D0 /* Pods_Boatelligent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D750CB93A311B1BE7B53F /* Pods_Boatelligent.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		453B79692364DDEC0035AB19 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		453B796D236572940035AB19 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4547308D235265A700EB74F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		45572739236E5F0200BFDAC0 /* Login copy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Login copy.storyboard"; sourceTree = "<group>"; };
 		505D750CB93A311B1BE7B53F /* Pods_Boatelligent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boatelligent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		593D447B56C3B8E97982B126 /* Pods-Boatelligent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boatelligent.debug.xcconfig"; path = "Target Support Files/Pods-Boatelligent/Pods-Boatelligent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				450949DA2319F3AB001C77C2 /* AppDelegate.swift */,
+				45572739236E5F0200BFDAC0 /* Login copy.storyboard */,
 				450949DE2319F3AB001C77C2 /* Main.storyboard */,
 				450949E12319F3AC001C77C2 /* Assets.xcassets */,
 				450949E32319F3AC001C77C2 /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4557273A236E5F0200BFDAC0 /* Login copy.storyboard in Resources */,
 				450949E52319F3AC001C77C2 /* LaunchScreen.storyboard in Resources */,
 				450949E22319F3AC001C77C2 /* Assets.xcassets in Resources */,
 				450949E02319F3AB001C77C2 /* Main.storyboard in Resources */,
