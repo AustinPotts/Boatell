@@ -24,7 +24,7 @@ class ScheduleServiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let calendar = FSCalendar(frame: CGRect(x: 20, y: 20, width: 320, height: 300))
+        let calendar = FSCalendar(frame: CGRect(x: 20, y: 20, width: 320, height: 330))
         calendar.dataSource = self
         calendar.delegate = self
         calendar.register(FSCalendarCell.self, forCellReuseIdentifier: "CELL")
@@ -37,7 +37,7 @@ class ScheduleServiceViewController: UIViewController {
         
         calendar.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         calendar.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        calendar.heightAnchor.constraint(equalToConstant: 485).isActive = true
+        calendar.heightAnchor.constraint(equalToConstant: 855).isActive = true
         calendar.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
 
         // Do any additional setup after loading the view.
@@ -79,5 +79,6 @@ extension ScheduleServiceViewController: FSCalendarDelegate, FSCalendarDataSourc
     }
     
     
+        
     
 }

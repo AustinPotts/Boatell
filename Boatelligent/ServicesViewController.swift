@@ -59,7 +59,7 @@ class ServicesViewController: UIViewController {
 //        collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: 0.5).isActive = true
 //
         collectionView.delegate = self
-        collectionView.dataSource = self
+        collectionView.dataSource = self //Methods wont run if these arent called 
     }
     
     
@@ -110,16 +110,17 @@ extension ServicesViewController: UICollectionViewDelegateFlowLayout, UICollecti
                 return cell
         }
         
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ViewCalendarSegue" {
-            guard let indexPath = collectionView.indexPathsForSelectedItems?.first?.item,
-                let partSelectVC = segue.destination as? ScheduleServiceViewController else{return}
-            
-            let selectedPart = partController.part[indexPath]
-            partSelectVC.part = selectedPart
-            
-        }
-     }
+//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "ViewCalendarSegue" {
+//            guard let indexPath = collectionView.indexPathsForSelectedItems?.first?.item,
+//                let partSelectVC = segue.destination as? ScheduleServiceViewController else{return}
+//
+//            let selectedPart = partController.part[indexPath]
+//            partSelectVC.part = selectedPart
+//
+//        }
+//
+//     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ViewCalendarSegue", sender: indexPath)
