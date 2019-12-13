@@ -239,37 +239,6 @@
             </objects>
             <point key="canvasLocation" x="60.869565217391312" y="-518.30357142857144"/>
         </scene>
-        <!--Log In-->
-        <scene sceneID="PzU-tw-dio">
-            <objects>
-                <viewController id="dbV-8h-vVV" customClass="MyProfileViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="O6g-Bg-gbL" customClass="LoginView" customModule="Boatelligent" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkW-Jv-hbq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.5817476309021038" green="0.80969920242174254" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="ZkW-Jv-hbq" firstAttribute="top" secondItem="O6g-Bg-gbL" secondAttribute="top" id="PfM-NM-8uP"/>
-                            <constraint firstItem="ZkW-Jv-hbq" firstAttribute="leading" secondItem="gwx-Ik-5gn" secondAttribute="leading" id="Z5l-Os-rQZ"/>
-                            <constraint firstItem="ZkW-Jv-hbq" firstAttribute="bottom" secondItem="gwx-Ik-5gn" secondAttribute="bottom" id="ZnR-SY-c7u"/>
-                            <constraint firstItem="ZkW-Jv-hbq" firstAttribute="trailing" secondItem="gwx-Ik-5gn" secondAttribute="trailing" id="pYZ-QZ-gvH"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="gwx-Ik-5gn"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="circle-user-7" id="2eO-8X-2kX"/>
-                    <navigationItem key="navigationItem" title="Log In" id="0TR-Tl-Tl8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bdq-bg-aLu"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PU5-Xt-bqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1218.840579710145" y="-510.26785714285711"/>
-        </scene>
         <!--My Cart-->
         <scene sceneID="XGV-21-c25">
             <objects>
@@ -292,7 +261,6 @@
         <image name="Mechanic" width="999" height="671"/>
         <image name="NewLogo" width="920" height="407"/>
         <image name="calendar-7" width="30" height="30"/>
-        <image name="circle-user-7" width="30" height="30"/>
         <image name="lock.fill" catalog="system" width="64" height="64"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="shopping-cart-7" width="30" height="30"/>
