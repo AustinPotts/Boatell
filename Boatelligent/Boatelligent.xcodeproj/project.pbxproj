@@ -19,11 +19,12 @@
 		451F69B3231A0F0100B19E07 /* ScheduleServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B2231A0F0100B19E07 /* ScheduleServiceViewController.swift */; };
 		451F69B8231A120B00B19E07 /* PartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B7231A120B00B19E07 /* PartController.swift */; };
 		451F69BA231A125000B19E07 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69B9231A125000B19E07 /* Part.swift */; };
-		451F69BD231B2ADA00B19E07 /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69BC231B2ADA00B19E07 /* MyCartViewController.swift */; };
+		451F69BD231B2ADA00B19E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69BC231B2ADA00B19E07 /* ViewController.swift */; };
 		453B796A2364DDEC0035AB19 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B79692364DDEC0035AB19 /* ServicesViewController.swift */; };
 		453B796E236572940035AB19 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B796D236572940035AB19 /* TestViewController.swift */; };
 		4547308E235265A700EB74F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4547308D235265A700EB74F4 /* LoginView.swift */; };
 		4557273A236E5F0200BFDAC0 /* Login copy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45572739236E5F0200BFDAC0 /* Login copy.storyboard */; };
+		456DA22223D2338800363BD9 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 456DA22123D2338700363BD9 /* SqueezeNet.mlmodel */; };
 		A9E6C58F1AAF82CF19F389D0 /* Pods_Boatelligent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D750CB93A311B1BE7B53F /* Pods_Boatelligent.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,11 +44,12 @@
 		451F69B2231A0F0100B19E07 /* ScheduleServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleServiceViewController.swift; sourceTree = "<group>"; };
 		451F69B7231A120B00B19E07 /* PartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartController.swift; sourceTree = "<group>"; };
 		451F69B9231A125000B19E07 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
-		451F69BC231B2ADA00B19E07 /* MyCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
+		451F69BC231B2ADA00B19E07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		453B79692364DDEC0035AB19 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		453B796D236572940035AB19 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4547308D235265A700EB74F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		45572739236E5F0200BFDAC0 /* Login copy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Login copy.storyboard"; sourceTree = "<group>"; };
+		456DA22123D2338700363BD9 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		505D750CB93A311B1BE7B53F /* Pods_Boatelligent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boatelligent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		593D447B56C3B8E97982B126 /* Pods-Boatelligent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boatelligent.debug.xcconfig"; path = "Target Support Files/Pods-Boatelligent/Pods-Boatelligent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 		450949CE2319F3AB001C77C2 = {
 			isa = PBXGroup;
 			children = (
+				456DA22123D2338700363BD9 /* SqueezeNet.mlmodel */,
 				453B796D236572940035AB19 /* TestViewController.swift */,
 				453B79692364DDEC0035AB19 /* ServicesViewController.swift */,
 				451F69BB231A147900B19E07 /* Model Controller */,
@@ -130,7 +133,7 @@
 		451F69B5231A116100B19E07 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				451F69BC231B2ADA00B19E07 /* MyCartViewController.swift */,
+				451F69BC231B2ADA00B19E07 /* ViewController.swift */,
 				451F69B0231A0C8800B19E07 /* PartViewViewController.swift */,
 				451F69AA231A06C100B19E07 /* LogInProfileViewController.swift */,
 				450949F2231A00C8001C77C2 /* CreateProfileViewController.swift */,
@@ -275,6 +278,7 @@
 				450949EF2319F47E001C77C2 /* PartCollectionViewCell.swift in Sources */,
 				450949DB2319F3AB001C77C2 /* AppDelegate.swift in Sources */,
 				451F69AB231A06C100B19E07 /* LogInProfileViewController.swift in Sources */,
+				456DA22223D2338800363BD9 /* SqueezeNet.mlmodel in Sources */,
 				453B796A2364DDEC0035AB19 /* ServicesViewController.swift in Sources */,
 				451F69BA231A125000B19E07 /* Part.swift in Sources */,
 				453B796E236572940035AB19 /* TestViewController.swift in Sources */,
@@ -283,7 +287,7 @@
 				4547308E235265A700EB74F4 /* LoginView.swift in Sources */,
 				451F69B1231A0C8800B19E07 /* PartViewViewController.swift in Sources */,
 				451F69B3231A0F0100B19E07 /* ScheduleServiceViewController.swift in Sources */,
-				451F69BD231B2ADA00B19E07 /* MyCartViewController.swift in Sources */,
+				451F69BD231B2ADA00B19E07 /* ViewController.swift in Sources */,
 				451F69B8231A120B00B19E07 /* PartController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
