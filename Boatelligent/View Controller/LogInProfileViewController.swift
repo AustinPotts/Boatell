@@ -10,10 +10,11 @@ import UIKit
 
 class LogInProfileViewController: UIViewController {
 
+    @IBOutlet weak var login: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        login.layer.cornerRadius = 25
     }
     
 

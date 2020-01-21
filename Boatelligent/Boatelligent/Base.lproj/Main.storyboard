@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="2198.5507246376815" y="233.70535714285714"/>
         </scene>
-        <!--Services View Controller-->
+        <!--Schedule-->
         <scene sceneID="x3e-jC-yK6">
             <objects>
                 <viewController id="b8y-uR-aEZ" customClass="ServicesViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BlW-y9-S5i"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="calendar-7" id="jDm-YG-StA">
+                    <tabBarItem key="tabBarItem" title="Schedule" image="calendar-7" id="jDm-YG-StA">
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="d42-C4-MtI"/>
@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="-548" y="459"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="RLR-p6-Y4T">
             <objects>
-                <viewController id="w8N-UY-2eV" sceneMemberID="viewController">
+                <viewController id="w8N-UY-2eV" customClass="LogInProfileViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="642-GI-Sfp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,13 +233,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="glP-UE-C5V"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="GAr-bD-rBG"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="GAr-bD-rBG"/>
+                    <connections>
+                        <outlet property="login" destination="Cni-K2-ZOa" id="Asy-Sp-NxO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l88-7b-VQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="60.869565217391312" y="-518.30357142857144"/>
         </scene>
-        <!--Photo AI-->
+        <!--Part Recognition -->
         <scene sceneID="XGV-21-c25">
             <objects>
                 <viewController id="8Ki-jG-T5p" customClass="ViewController" customModule="Boatelligent" customModuleProvider="target" sceneMemberID="viewController">
@@ -262,26 +265,26 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ML" translatesAutoresizingMaskIntoConstraints="NO" id="G3x-zP-YhB">
-                                <rect key="frame" x="0.0" y="86" width="414" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MLInventory" translatesAutoresizingMaskIntoConstraints="NO" id="G3x-zP-YhB">
+                                <rect key="frame" x="0.0" y="86" width="414" height="139"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="Cng-xn-gc6"/>
-                                    <constraint firstAttribute="height" constant="128" id="m8s-g2-OOb"/>
+                                    <constraint firstAttribute="height" constant="139" id="m8s-g2-OOb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jk9-87-aqi">
-                                <rect key="frame" x="20" y="233" width="59" height="27"/>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="20"/>
+                                <rect key="frame" x="20" y="233" width="59" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nP-qf-nrF">
-                                <rect key="frame" x="20" y="333" width="59" height="27"/>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="20"/>
+                                <rect key="frame" x="20" y="333" width="59" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Upload or Take a photo of the part you want examnied by AI." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0b5-MC-fUq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Upload or Take a photo of the inventory you want examnied by AI." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0b5-MC-fUq">
                                 <rect key="frame" x="20" y="259" width="374" height="70"/>
                                 <color key="backgroundColor" red="0.32453566789999999" green="0.40997284649999999" blue="0.54369235039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -292,7 +295,7 @@
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Save your part identification for the mechanic." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="raS-34-u17">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Save the part examined to your Invetory Data Base." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="raS-34-u17">
                                 <rect key="frame" x="20" y="357" width="374" height="70"/>
                                 <color key="backgroundColor" red="0.32453566789999999" green="0.40997284649999999" blue="0.54369235039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -306,13 +309,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUJ-aS-TtG">
-                                <rect key="frame" x="152" y="741" width="110" height="49"/>
+                                <rect key="frame" x="112" y="718" width="190" height="53"/>
                                 <color key="backgroundColor" red="0.783772409" green="0.86914181710000005" blue="0.98215395210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="1qB-jD-RwD"/>
-                                    <constraint firstAttribute="width" constant="110" id="dXd-Mw-EcE"/>
+                                    <constraint firstAttribute="height" constant="53" id="u0P-9h-l02"/>
+                                    <constraint firstAttribute="width" constant="190" id="uub-B8-b8q"/>
                                 </constraints>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Save To Inventory"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3226440974" green="0.41061619539999999" blue="0.53272946499999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -320,31 +323,32 @@
                             <constraint firstItem="jk9-87-aqi" firstAttribute="leading" secondItem="xU6-qg-ZJk" secondAttribute="leading" constant="20" id="360-r5-9LU"/>
                             <constraint firstItem="5nP-qf-nrF" firstAttribute="leading" secondItem="xU6-qg-ZJk" secondAttribute="leading" constant="20" id="4Vn-KB-3Qt"/>
                             <constraint firstItem="raS-34-u17" firstAttribute="top" secondItem="0b5-MC-fUq" secondAttribute="bottom" constant="28" id="4nI-iz-iAy"/>
+                            <constraint firstItem="YUJ-aS-TtG" firstAttribute="leading" secondItem="xU6-qg-ZJk" secondAttribute="leading" constant="112" id="5qb-AJ-ZhO"/>
                             <constraint firstItem="xU6-qg-ZJk" firstAttribute="trailing" secondItem="jk9-87-aqi" secondAttribute="trailing" constant="335" id="6Kz-CC-dlN"/>
                             <constraint firstItem="xU6-qg-ZJk" firstAttribute="trailing" secondItem="EEx-y5-Fak" secondAttribute="trailing" constant="93" id="6V1-dj-fVN"/>
                             <constraint firstItem="raS-34-u17" firstAttribute="leading" secondItem="xU6-qg-ZJk" secondAttribute="leading" constant="20" id="CjL-yU-NQf"/>
                             <constraint firstItem="G3x-zP-YhB" firstAttribute="trailing" secondItem="xU6-qg-ZJk" secondAttribute="trailing" id="Ixy-Ua-xEh"/>
                             <constraint firstItem="xU6-qg-ZJk" firstAttribute="trailing" secondItem="raS-34-u17" secondAttribute="trailing" constant="20" id="Ke0-Oq-tCi"/>
                             <constraint firstItem="EEx-y5-Fak" firstAttribute="leading" secondItem="xU6-qg-ZJk" secondAttribute="leading" constant="94" id="L7X-C7-u8R"/>
-                            <constraint firstItem="xU6-qg-ZJk" firstAttribute="trailing" secondItem="YUJ-aS-TtG" secondAttribute="trailing" constant="152" id="OXl-zT-dtF"/>
+                            <constraint firstItem="xU6-qg-ZJk" firstAttribute="bottom" secondItem="YUJ-aS-TtG" secondAttribute="bottom" constant="42" id="MHN-Oy-vcR"/>
                             <constraint firstItem="xU6-qg-ZJk" firstAttribute="trailing" secondItem="5nP-qf-nrF" secondAttribute="trailing" constant="335" id="Rg7-gp-0nS"/>
                             <constraint firstItem="0b5-MC-fUq" firstAttribute="leading" secondItem="xU6-qg-ZJk" secondAttribute="leading" constant="20" id="XS9-Hg-zhS"/>
                             <constraint firstItem="G3x-zP-YhB" firstAttribute="leading" secondItem="xU6-qg-ZJk" secondAttribute="leading" id="XaL-gW-wdW"/>
-                            <constraint firstItem="YUJ-aS-TtG" firstAttribute="leading" secondItem="xU6-qg-ZJk" secondAttribute="leading" constant="152" id="Ye0-BH-QlT"/>
                             <constraint firstItem="5nP-qf-nrF" firstAttribute="top" secondItem="0b5-MC-fUq" secondAttribute="bottom" constant="4" id="anl-sV-PQu"/>
-                            <constraint firstItem="xU6-qg-ZJk" firstAttribute="bottom" secondItem="YUJ-aS-TtG" secondAttribute="bottom" constant="23" id="arn-zV-Ptb"/>
-                            <constraint firstItem="0b5-MC-fUq" firstAttribute="top" secondItem="G3x-zP-YhB" secondAttribute="bottom" constant="45" id="cTl-gf-Dvg"/>
+                            <constraint firstItem="0b5-MC-fUq" firstAttribute="top" secondItem="G3x-zP-YhB" secondAttribute="bottom" constant="34" id="cTl-gf-Dvg"/>
                             <constraint firstItem="xU6-qg-ZJk" firstAttribute="trailing" secondItem="hxm-vd-XZK" secondAttribute="trailing" constant="8" id="hE7-LV-ZPU"/>
                             <constraint firstItem="hxm-vd-XZK" firstAttribute="leading" secondItem="xU6-qg-ZJk" secondAttribute="leading" constant="8" id="j3c-s9-1XV"/>
                             <constraint firstItem="hxm-vd-XZK" firstAttribute="top" secondItem="EEx-y5-Fak" secondAttribute="bottom" constant="8" id="rWD-bQ-7D4"/>
+                            <constraint firstItem="xU6-qg-ZJk" firstAttribute="trailing" secondItem="YUJ-aS-TtG" secondAttribute="trailing" constant="112" id="xT4-DO-gQn"/>
                             <constraint firstItem="G3x-zP-YhB" firstAttribute="top" secondItem="3iF-PA-oLa" secondAttribute="top" constant="86" id="xVL-BX-38W"/>
                             <constraint firstItem="EEx-y5-Fak" firstAttribute="top" secondItem="raS-34-u17" secondAttribute="bottom" constant="8" id="yDa-Po-797"/>
-                            <constraint firstItem="jk9-87-aqi" firstAttribute="top" secondItem="G3x-zP-YhB" secondAttribute="bottom" constant="19" id="yOl-DW-MtO"/>
+                            <constraint firstItem="jk9-87-aqi" firstAttribute="top" secondItem="G3x-zP-YhB" secondAttribute="bottom" constant="8" id="yOl-DW-MtO"/>
+                            <constraint firstItem="YUJ-aS-TtG" firstAttribute="top" secondItem="hxm-vd-XZK" secondAttribute="bottom" constant="8" id="zN5-kX-Koo"/>
                             <constraint firstItem="xU6-qg-ZJk" firstAttribute="trailing" secondItem="0b5-MC-fUq" secondAttribute="trailing" constant="20" id="zZt-Wy-XgK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xU6-qg-ZJk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Photo AI" id="gwn-VE-AE4">
+                    <navigationItem key="navigationItem" title="Part Recognition " id="gwn-VE-AE4">
                         <barButtonItem key="leftBarButtonItem" title="Library" id="pD5-ZK-OOx">
                             <connections>
                                 <action selector="openLibrary:" destination="8Ki-jG-T5p" id="vJH-gr-VYz"/>
@@ -359,17 +363,18 @@
                     <connections>
                         <outlet property="imager" destination="EEx-y5-Fak" id="Sqc-pO-Ptd"/>
                         <outlet property="photoLabel" destination="hxm-vd-XZK" id="Qzz-QK-mwZ"/>
+                        <outlet property="saveToInv" destination="YUJ-aS-TtG" id="F6z-At-tyh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9TX-eV-ON1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2166.666666666667" y="994.41964285714278"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--AI-->
         <scene sceneID="KTS-6f-hkb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gCv-MQ-UN6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="camera.viewfinder" catalog="system" id="lJy-zD-DRN"/>
+                    <tabBarItem key="tabBarItem" title="AI" image="camera.viewfinder" catalog="system" id="lJy-zD-DRN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FN6-yE-iSy">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -386,7 +391,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ML" width="1440" height="810"/>
+        <image name="MLInventory" width="1254" height="836"/>
         <image name="Mechanic" width="999" height="671"/>
         <image name="NewLogo" width="920" height="407"/>
         <image name="calendar-7" width="30" height="30"/>

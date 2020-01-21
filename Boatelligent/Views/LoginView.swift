@@ -24,6 +24,7 @@ class LoginView: UIView {
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.textColor = .white
+        button.layer.cornerRadius = 25
         button.addTarget(self, action: #selector(LoginButton), for: .touchUpInside)
         return button
     }()
@@ -33,6 +34,7 @@ class LoginView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Sign Up", for: .normal)
         button.tintColor = .blue
+        button.layer.cornerRadius = 25
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(SignUpButton), for: .touchUpInside)
         return button

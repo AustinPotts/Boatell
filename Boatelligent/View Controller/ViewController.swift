@@ -14,13 +14,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         @IBOutlet weak var imager: UIImageView!
         @IBOutlet weak var photoLabel: UILabel!
             
-            
+    @IBOutlet weak var saveToInv: UIButton!
+    
             var model: SqueezeNet!
             
             override func viewDidLoad() {
                 super.viewDidLoad()
                
-                
+                saveToInv.layer.cornerRadius = 25
             }
             
             override func viewWillAppear(_ animated: Bool) {
