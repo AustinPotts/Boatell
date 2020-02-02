@@ -25,6 +25,10 @@
 		453B796A2364DDEC0035AB19 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B79692364DDEC0035AB19 /* ServicesViewController.swift */; };
 		453B796E236572940035AB19 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B796D236572940035AB19 /* TestViewController.swift */; };
 		4547308E235265A700EB74F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4547308D235265A700EB74F4 /* LoginView.swift */; };
+		45531BA423E66FDE00EA9CB3 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45531BA323E66FDE00EA9CB3 /* Bearer.swift */; };
+		45531BA623E6700400EA9CB3 /* UserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45531BA523E6700400EA9CB3 /* UserRepresentation.swift */; };
+		45531BA923E670C200EA9CB3 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45531BA823E670C200EA9CB3 /* KeychainWrapper.swift */; };
+		45531BAB23E670F700EA9CB3 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45531BAA23E670F700EA9CB3 /* KeychainItemAccessibility.swift */; };
 		4557273A236E5F0200BFDAC0 /* Login copy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45572739236E5F0200BFDAC0 /* Login copy.storyboard */; };
 		456DA22223D2338800363BD9 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 456DA22123D2338700363BD9 /* SqueezeNet.mlmodel */; };
 		A9E6C58F1AAF82CF19F389D0 /* Pods_Boatelligent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D750CB93A311B1BE7B53F /* Pods_Boatelligent.framework */; };
@@ -52,6 +56,10 @@
 		453B79692364DDEC0035AB19 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		453B796D236572940035AB19 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4547308D235265A700EB74F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		45531BA323E66FDE00EA9CB3 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
+		45531BA523E6700400EA9CB3 /* UserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepresentation.swift; sourceTree = "<group>"; };
+		45531BA823E670C200EA9CB3 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		45531BAA23E670F700EA9CB3 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		45572739236E5F0200BFDAC0 /* Login copy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Login copy.storyboard"; sourceTree = "<group>"; };
 		456DA22123D2338700363BD9 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		505D750CB93A311B1BE7B53F /* Pods_Boatelligent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boatelligent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +98,7 @@
 		450949CE2319F3AB001C77C2 = {
 			isa = PBXGroup;
 			children = (
+				45531BA723E670AD00EA9CB3 /* Helpers */,
 				456DA22123D2338700363BD9 /* SqueezeNet.mlmodel */,
 				453B796D236572940035AB19 /* TestViewController.swift */,
 				453B79692364DDEC0035AB19 /* ServicesViewController.swift */,
@@ -152,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				451F69B9231A125000B19E07 /* Part.swift */,
+				45531BA323E66FDE00EA9CB3 /* Bearer.swift */,
+				45531BA523E6700400EA9CB3 /* UserRepresentation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +174,15 @@
 				450AD5BA23E49280003AECAB /* LogInController.swift */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		45531BA723E670AD00EA9CB3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				45531BA823E670C200EA9CB3 /* KeychainWrapper.swift */,
+				45531BAA23E670F700EA9CB3 /* KeychainItemAccessibility.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,9 +308,13 @@
 				453B796A2364DDEC0035AB19 /* ServicesViewController.swift in Sources */,
 				451F69BA231A125000B19E07 /* Part.swift in Sources */,
 				453B796E236572940035AB19 /* TestViewController.swift in Sources */,
+				45531BA623E6700400EA9CB3 /* UserRepresentation.swift in Sources */,
+				45531BA923E670C200EA9CB3 /* KeychainWrapper.swift in Sources */,
 				450AD5BB23E49280003AECAB /* LogInController.swift in Sources */,
 				450949F12319F6F5001C77C2 /* MyProfileViewController.swift in Sources */,
 				450AD5BD23E49AA0003AECAB /* UserProfileViewController.swift in Sources */,
+				45531BA423E66FDE00EA9CB3 /* Bearer.swift in Sources */,
+				45531BAB23E670F700EA9CB3 /* KeychainItemAccessibility.swift in Sources */,
 				450949F3231A00C8001C77C2 /* CreateProfileViewController.swift in Sources */,
 				4547308E235265A700EB74F4 /* LoginView.swift in Sources */,
 				451F69B1231A0C8800B19E07 /* PartViewViewController.swift in Sources */,
